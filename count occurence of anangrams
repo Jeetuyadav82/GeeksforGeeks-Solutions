@@ -1,0 +1,18 @@
+for i in range(int(input())):
+    a=input()
+    b=input()
+    x=0
+    for i in range(0,len(a)-len(b)+1):
+        p=a[i:i+len(b)]
+        r=set(p)
+        q=set(b)
+        l1=[p.count(i) for i in r]
+        l2=[b.count(i) for i in q]
+        o=0
+        if len(l1)==len(l2):
+            for i in range(len(l1)):
+                if l1[i]!=l2[i]:
+                    o=1
+            if o==0 and r==q:
+                x+=1
+    print(x)
