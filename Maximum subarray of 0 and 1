@@ -1,0 +1,20 @@
+def maxLen(n, lis):
+    y=0
+    for z in range(len(lis)):
+        if lis[z]==0:
+            lis[z]=-1
+    p=lis
+    for k in range(len(p)):
+        for l in range(k+1,len(p)+1):
+            x=p[k:l]
+            if sum(x)==0:
+                if len(x)>y:
+                    y=len(x)
+    return y
+
+if __name__=='__main__':
+    t=int(input())
+    for i in range(t):
+        n = int(input())
+        arr = list(map(int, input().strip().split()))
+        print(maxLen(n, arr))
