@@ -1,0 +1,15 @@
+def pr(n):
+    for i in range(2, n//2):
+        if n % i == 0:
+            return 0
+    return 1
+
+t=int(input())
+while t:
+    t-=1
+    a=int(input())
+    for i in range(2,a//2):
+        d=a-i
+        if(pr(i) and pr(d)):
+            print(i,d)
+            break
