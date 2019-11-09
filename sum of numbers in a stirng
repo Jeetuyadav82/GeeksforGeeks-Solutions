@@ -1,0 +1,24 @@
+for i in range(int(input())):
+    x=input()
+    k=[]
+    y=0
+    s=''
+    for j in x:
+        if j.isdigit():
+            s+=j
+            k.append(int(s))
+        else:
+            if len(k)>0:
+                y+=max(k)
+            k=[]
+            s=''
+    p=''
+    for j in range(len(x)-1 ,0,-1):
+        if x[j].isdigit():
+            p+=x[j]
+        else:
+            if len(p)>0:
+                y+=int(p[ : :-1])
+            break   
+    print(y)
+
