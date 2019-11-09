@@ -1,0 +1,17 @@
+def maxDistance(arr, n):
+    l1=[]
+    for i in range(n-1,n//2,-1):
+        for j in range(n//2):
+            if arr[i]==arr[j]:
+                l1.append(i-j)
+                break
+    return max(l1)
+
+t = int(input())
+for i in range(t):
+    n = int(input())
+    arr = list(map(int, input().strip().split()))
+    print(maxDistance(arr, n))
+
+
+        
