@@ -1,0 +1,28 @@
+def sortByFreq(a,n):
+    s=list(set(a))
+    l=[]
+    a.sort()
+    for i in s:
+        l.append(a.count(i))
+    l.sort(reverse=True)
+    l1=[]
+    l2=[]
+    for i in l:
+        for j in s:
+            if j not in l2:
+                if a.count(j)==i:
+                    for k in range(i):
+                        l1.append(j)
+                    l2.append(j)
+        if len(s)==len(l2):
+            break      
+    print(*l1)                
+        
+
+
+t = int(input())
+for tt in range(t):
+    n=int(input())
+    a = list(map(int, input().strip().split()))
+    sortByFreq(a,n)
+
