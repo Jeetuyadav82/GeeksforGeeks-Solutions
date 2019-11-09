@@ -1,0 +1,18 @@
+for i in range(int(input())):
+    x=int(input())
+    l=[int(i) for i in input().split()]
+    y=0
+    p=l[0]
+    q=max(l[1:])
+    for i in range(1,x-1):
+        if l[i]>p:
+            p=l[i]
+        if l[i]==q:
+            q=max(l[i+1:])
+        k=min(p,q)
+        y+=max(k-l[i],0)
+    print(y)
+    
+    
+        
+
