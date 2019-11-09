@@ -1,0 +1,14 @@
+for _ in range(int(input())):
+    a = int(input())
+    d = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    c = a
+    r = []
+    while c>61:
+        r.append(c%62)
+        c= c//62
+    r.append(c%62)
+    r.reverse()
+    for i in r:
+        print(d[i],end = '')
+    print()
+    print(a)
