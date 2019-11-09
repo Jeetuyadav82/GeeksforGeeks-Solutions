@@ -1,0 +1,26 @@
+def sue(x):
+    p=[1]
+    s=''
+    l=[]
+    l.append(1)
+    for i in range(x):
+        o=1
+        p.append('y')
+        for j in range(len(p)-1):
+            if p[j]==p[j+1]:
+                o+=1
+            else:
+                s+=str(o)+str(p[j])
+                o=1
+        p=list(s)
+        l.append(int(s))
+        s=''
+    return l
+
+                
+        
+for i in range(int(input())):
+    x=int(input())
+    result=sue(x)
+    print(result[x-1])
+    
