@@ -1,0 +1,5 @@
+for i in range(int(input())):
+    x,y=map(int,input().split(' '))
+    l=list(map(int,input().split()))
+    p=l[y%x:]+l[:y%x]
+    print(*p)
