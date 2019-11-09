@@ -1,0 +1,17 @@
+for i in range(int(input())):
+    h= int(input())
+    l=[int(i) for i in input().split()]
+    l1={}
+    for i in range(h):
+        l1[str(i)]=[]  
+    for i in range(0,len(l),h):
+        for j in range(h):
+            l1[str(j)]+=[l[i+j]]
+    s=''
+    for i in l1.values():
+        s+=''.join(str(i[j])+' ' for j in range(h-1,-1,-1))
+    s=s[0:len(s)-1]
+    print(s)
+            
+            
+        
