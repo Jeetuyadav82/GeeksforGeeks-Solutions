@@ -1,0 +1,28 @@
+def bitDifference(x,y):
+    x=bin(x)[2: ]
+    y=bin(y)[2: ]
+    s=''
+    if len(x)<len(y):
+        for j in range(len(y)-len(x)):
+            s+='0'
+        x=s+x
+    if len(x)>len(y):
+        for j in range(len(x)-len(y)):
+            s+='0'
+        y=s+y
+    p=0
+    for k in range(len(x)):
+        if x[k]!=y[k]:
+            p+=1
+    return p
+    
+for i in range(int(input())):
+    h=int(input())
+    l=[int(i) for i in input().split()]
+    x=0
+    for i in range(h):
+        for j in range(h):
+            if l[i]!=l[j]:
+                diff=bitDifference(l[i],l[j])
+                x+=diff
+    print(x)
