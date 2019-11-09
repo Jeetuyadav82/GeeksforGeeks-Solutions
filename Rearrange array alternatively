@@ -1,0 +1,21 @@
+for i in range(int(input())):
+    k=int(input())
+    l=[int(i) for i in input().split()]
+    p=sorted(l)
+    q=sorted(l,reverse=True)
+    if k%2==0:
+        q=q[0:k//2]
+        p=p[0:k//2]
+        for i in range(k//2):
+            print(q[i],p[i],end=' ')
+    else:
+        s=''
+        q=q[0:(k//2)+1]
+        p=p[0:k//2]
+        for i in range(k//2):
+            s+=str(q[i])+' '+str(p[i])+' '
+        s+=str(q[k//2])
+        print(s)
+            
+        
+    
