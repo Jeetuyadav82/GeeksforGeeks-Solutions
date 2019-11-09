@@ -1,0 +1,13 @@
+for i in range(int(input())):
+    k=int(input())
+    l=input().split()
+    q=[]
+    for i in range(k//2):
+        for j in range(k-1,k//2-1,-1):
+            if int(l[i])<=int(l[j]):
+                q.append(j-i)
+                break
+    if len(q)>0:
+        print(max(q))
+    else:
+        print('0')
