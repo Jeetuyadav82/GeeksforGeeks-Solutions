@@ -1,0 +1,15 @@
+for i in range(int(input())):
+    k=int(input())
+    l=[int(i) for i in input().split()]
+    l.sort()
+    p=''
+    q=''
+    for i in range(0,k):
+        if i%2==0:
+            p+=str(l[i])
+        else:
+            q+=str(l[i])
+    k=int(p)+int(q)
+    print(k)
+        
+        
