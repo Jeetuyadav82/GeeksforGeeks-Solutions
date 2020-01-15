@@ -1,0 +1,56 @@
+for j in range(int(input())):
+    a=input()
+    b=input()
+    k=[]
+    m=[]
+    l=0
+    for i in a:
+        if i!="#":
+            if len(k)>0:
+                p=ord(k[-1])+l
+                if p>90:
+                    x=p-90
+                    x=x%26
+                    p=x+64
+                k[len(k)-1]=chr(p)
+                l=0
+            k.append(i)
+        else:
+            l+=1
+    p=ord(k[-1])+l
+    if p>90:
+        x=p-90
+        x=x%26
+        p=x+64
+    k[len(k)-1]=chr(p)
+    l=0
+    for i in b:
+        if i!="#":
+            if len(m)>0:
+                p=ord(m[-1])+l
+                if p>90:
+                    x=p-90
+                    x=x%26
+                    p=x+64
+                m[len(m)-1]=chr(p)
+                l=0
+            m.append(i)
+        else:
+            l+=1
+    p=ord(m[-1])+l
+    if p>90:
+        x=p-90
+        x=x%26
+        p=x+64
+    m[len(m)-1]=chr(p)
+    if k==m:
+        print("Yes")
+    else:
+        print("No")
+            
+        
+            
+    
+    
+        
+        
